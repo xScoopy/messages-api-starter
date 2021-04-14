@@ -6,8 +6,8 @@ const bodyParser = require('body-parser')
 const app = express()
 
 // Use Body Parser
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 
 app.use((req, res, next) => {
     const now = new Date().toString()
